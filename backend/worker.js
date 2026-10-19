@@ -53,8 +53,8 @@ export default {async fetch(request,env){
   }
   return json({error:'Não encontrado.'},404);
  }catch(e){
-  if(e.message==='UNAUTHORIZED')return json({error:'Entre com um e-mail autorizado pelo Cloudflare Access.'},401);
-  if(e.message==='AUTH_NOT_CONFIGURED')return json({error:'Login ainda não configurado. O painel permanece bloqueado.'},503);
+  if(e.message==='UNAUTHORIZED')return json({error:'Entre com um e-mail autorizado pelo Cloudflare Access.',code:e.code||'AUTH_REQUIRED'},401);
+  if(e.message==='AUTH_NOT_CONFIGURED')return json({error:e.code==='AUTH_EMAILS_MISSING'?'A variável ADMIN_EMAILS precisa ser configurada como Secret neste Worker.':'Login ainda não configurado. O painel permanece bloqueado.',code:e.code||'AUTH_CONFIG_MISSING'},503);
   console.error('Falha no backend:',e.name);return json({error:'Serviço indisponível. Confira o banco e as migrações.'},503);
  }
 }};
