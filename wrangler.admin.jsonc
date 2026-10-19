@@ -12,7 +12,7 @@
   "vars": {
     "APP_MODE": "admin",
     "ACCESS_TEAM_DOMAIN": "proud-salad-b35b.cloudflareaccess.com",
-    "ACCESS_AUD": "CONFIGURAR"
+    "ACCESS_AUD": "cfcdc0b70c8909f2ca5c58501ca02e377d7eea9319c3bad7eb75434d994f357b"
   },
   "d1_databases": [
     {
