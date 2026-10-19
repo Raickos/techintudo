@@ -31,3 +31,5 @@
 .how p{font-size:13px;color:#4f6479;line-height:1.8}
 @media(max-width:1050px){.how{grid-template-columns:repeat(3,1fr);padding:25px}.how>div{grid-column:1/-1}.how article{padding:20px 16px}.price{font-size:32px}}
 @media(max-width:740px){.price{font-size:27px;letter-spacing:-1px;padding:10px 8px;border-left-width:3px}.price span{font-size:13px}.price-label{font-size:10px}.terms{font-size:11px;min-height:52px}.how{grid-template-columns:1fr;gap:14px;padding:22px 18px;margin-bottom:30px}.how h2{font-size:27px}.how>div{padding:0 0 8px}.how article{padding:20px;max-width:none!important}.how article:last-child{grid-column:auto}.how h3{font-size:16px}.how p{font-size:13px}.how article>span{margin-bottom:12px}}
+
+.sync-status{font-size:11px;line-height:1.8;color:#536d83;margin-bottom:15px}body[data-mode="public"] #open-admin,body:not([data-mode="local"]) #reset-demo,body[data-mode="local"] #import-initial,body[data-mode="local"] #refresh-catalog,body[data-mode="local"] .logout{display:none}
