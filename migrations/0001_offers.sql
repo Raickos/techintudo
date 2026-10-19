@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS offers (
+ id TEXT PRIMARY KEY,
+ data TEXT NOT NULL CHECK(json_valid(data)),
+ revision INTEGER NOT NULL DEFAULT 1,
+ updated_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS audit_log (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ offer_id TEXT NOT NULL,
+ action TEXT NOT NULL,
+ actor TEXT NOT NULL,
+ created_at TEXT NOT NULL
+);
