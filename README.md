@@ -30,3 +30,5 @@ Conteúdos inteiramente demonstrativos não levam à loja. Links reais possuem a
 ## Operação real
 
 Concluir a ativação e os testes com as duas contas. Definir backups e recuperação do D1. Conferir regras vigentes dos afiliados sobre domínio, tráfego pago, imagens, preços e dados. Substituir exemplos e prazos fictícios, revisar condições e informações institucionais/privacidade antes dos anúncios.
+
+Configuração do painel administrativo.
