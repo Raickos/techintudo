@@ -1,0 +1,9 @@
+export const storageKey='techintudo-preview-v1';
+export function dayKey(value){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));}
+export function expireOffers(offers,now=Date.now()){return offers.map(o=>o.status==='active'&&o.endsAt&&new Date(o.endsAt).getTime()<=now?{...o,status:o.type==='coupon'?'coupon-ended':'ended',endedAt:o.endsAt}:o);}
+export function visibleClosed(offers,now=Date.now()){return offers.filter(o=>o.status!=='active'&&o.endedAt&&dayKey(o.endedAt)===dayKey(now));}
+export function matches(o,{search='',category='Todas',store='',type='all'}={}){const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();return norm([o.title,o.specs,o.category,o.store].join(' ')).includes(norm(search))&&(category==='Todas'||o.category===category)&&(!store||o.store===store)&&(type==='all'||(type==='featured'?o.featured:o.type===type));}
+export function countdown(deadline,now=Date.now()){const seconds=Math.max(0,Math.ceil((new Date(deadline).getTime()-now)/1000));return [Math.floor(seconds/3600),Math.floor(seconds%3600/60),seconds%60].map(n=>String(n).padStart(2,'0')).join(':');}
+export function safeUrl(value){try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null;}catch{return null;}}
+export function dateTime(value){return new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(value));}
+export function localInput(value){if(!value)return '';const parts=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(value));return parts.replace(' ','T');}
