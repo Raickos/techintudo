@@ -32,3 +32,7 @@ Conteúdos inteiramente demonstrativos não levam à loja. Links reais possuem a
 Concluir a ativação e os testes com as duas contas. Definir backups e recuperação do D1. Conferir regras vigentes dos afiliados sobre domínio, tráfego pago, imagens, preços e dados. Substituir exemplos e prazos fictícios, revisar condições e informações institucionais/privacidade antes dos anúncios.
 
 Configuração do painel administrativo.
+
+## Paginação do catálogo
+
+As ofertas são exibidas em páginas de até 12 itens, com navegação Anterior/Próxima e números de página. Busca, categoria, loja, tipo e ordenação retornam à primeira página. A sincronização automática preserva a página selecionada e ajusta a última página quando o número de ofertas diminui. Ofertas encerradas têm paginação independente.
