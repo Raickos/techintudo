@@ -36,3 +36,5 @@ Configuração do painel administrativo.
 ## Paginação do catálogo
 
 As ofertas são exibidas em páginas de até 12 itens, com navegação Anterior/Próxima e números de página. Busca, categoria, loja, tipo e ordenação retornam à primeira página. A sincronização automática preserva a página selecionada e ajusta a última página quando o número de ofertas diminui. Ofertas encerradas têm paginação independente.
+
+Terceiro lote de 20/10/2026: dez imagens originais adicionadas em `dist/assets/products/2026-10-20/`. A inclusão das ofertas no D1 é aditiva e mantém o catálogo existente; a paginação continua com 12 itens.
