@@ -1,4 +1,4 @@
-export const categories=['Todas','Áudio','Games e monitores','Acessórios','Casa e utilidades','Segurança','Beleza','Esporte'];
+export const categories=['Todas','Áudio','Games e monitores','Celulares','Notebooks','Acessórios','Casa e utilidades','Segurança','Beleza','Moda','Esporte','Suplementos'];
 export const whatsapp='https://chat.whatsapp.com/Lf3GE5wPuzVCqGtrSuyWyG?s=cl&p=a&mlu=4&ilr=4';
 export function initialOffers(now=Date.now()){
  const entries=[
