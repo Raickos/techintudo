@@ -33,6 +33,8 @@ export default {async fetch(request,env){
   const raw=await request.text();if(raw.length>20000)return json({error:'Dados excedem o limite.'},413);
   let input;try{input=JSON.parse(raw);}catch{return json({error:'JSON inválido.'},400);}
   if(url.pathname==='/api/seed'&&request.method==='POST'){
+   // Depois da primeira carga, não reintroduzir ofertas de demonstração removidas.
+   const existing=await list(env.DB);if(existing.length)return json({offers:expireOffers(existing)});
    // Inserção idempotente: nunca sobrescreve ofertas editadas nem reinicia prazos existentes.
    const seed=initialOffers(),now=new Date().toISOString();
    await env.DB.batch(seed.map(o=>env.DB.prepare('INSERT OR IGNORE INTO offers (id,data,revision,updated_at) VALUES (?,?,1,?)').bind(o.id,JSON.stringify(o),now)));
