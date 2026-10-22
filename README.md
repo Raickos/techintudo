@@ -40,3 +40,5 @@ As ofertas são exibidas em páginas de até 12 itens, com navegação Anterior/
 Terceiro lote de 20/10/2026: dez imagens originais adicionadas em `dist/assets/products/2026-10-20/`. A inclusão das ofertas no D1 é aditiva e mantém o catálogo existente; a paginação continua com 12 itens.
 
 Lote de 21/10/2026: doze imagens originais em `dist/assets/products/2026-10-21/`. Inclusão no D1 preserva as ofertas anteriores e mantém a paginação com 12 itens; preços e condições fornecidos pela curadoria.
+
+Lote de 22/10/2026: oito novas imagens em `dist/assets/products/2026-10-22/`. O soprador já cadastrado mantém seu registro. Inclusão aditiva no D1, com paginação de 12 itens.
